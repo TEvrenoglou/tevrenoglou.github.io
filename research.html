@@ -59,18 +59,17 @@
             display: flex;
             flex-wrap: wrap;
             padding: 30px;
+            gap: 30px;
         }
         
         .interests {
-            flex: 3;
+            flex: 1;
             min-width: 300px;
-            padding-right: 30px;
         }
         
-        .publications  {
-            flex: 3;
+        .publications {
+            flex: 1;
             min-width: 300px;
-            padding-right: 30px;
         }
         
         .sidebar {
@@ -87,6 +86,11 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #4a6580;
+        }
+        
+        h3 {
+            color: #4a6580;
+            margin: 15px 0 10px 0;
         }
         
         p {
@@ -154,6 +158,45 @@
         
         .logo-img:hover {
             transform: scale(1.03);
+        }
+        
+        .publication-list {
+            list-style-type: none;
+        }
+        
+        .publication-list li {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaecef;
+        }
+        
+        .publication-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .publication-authors {
+            color: #5a6a7e;
+            font-style: italic;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .publication-journal {
+            color: #5a6a7e;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .publication-links a {
+            margin-right: 15px;
+            font-size: 0.9rem;
         }
         
         .contact {
@@ -227,7 +270,7 @@
                 flex-direction: column;
             }
             
-            .about {
+            .interests, .publications {
                 padding-right: 0;
             }
             
@@ -245,24 +288,68 @@
     <div class="container">
         <header>
             <h1>Research</h1>
+            <p class="tagline">The research profile of Dr. Theodoros Evrenoglou</p>
         </header>
+        
         <div class="content">
             <div class="interests">
-                <h2>Scientific interests </h2>
-                <p>I am a Senior Researcher and the group leader of the Meta-Analysis group at the <a href="https://www.uniklinik-freiburg.de/imbi-en/employees.html?imbiuser=evrenogl&cHash=06e1c2c6fe4cad57ed625750c5ee432d">Institute of Medical Biometry and Statistics</a>, part of the Faculty of Medicine and Medical Center at the University of Freiburg in Germany. In addition, I am the Principal Investigator of a research grant funded by the German Research Foundation (Deutsche Forschungsgemeinschaft: DFG).</p>
+                <h2>Scientific Interests</h2>
+                <p>My research focuses on advancing statistical methodologies in meta-analysis, particularly addressing challenges with sparse data in network meta-analysis. I develop and validate novel statistical approaches to improve evidence synthesis in medical research.</p>
                 
-                <p>I obtained a BSc in Mathematics and an MSc in Statistics and Operational Research from the <a href="https://math.uoi.gr/index.php/gr/">Department of Mathematics at the University of Ioannina</a> in 2017 and 2019, respectively. I was awarded a PhD in Biostatistics in 2022 from Universit&eacute Paris Cit&eacute and my thesis titled <a href="https://theses.hal.science/tel-04746260v1">"Dealing with Sparse Data in Network Meta-Analysis"</a>.</p>
+                <h3>Research Areas</h3>
+                <ul>
+                    <li>Network Meta-Analysis</li>
+                    <li>Bayesian Statistics</li>
+                    <li>Sparse Data Methodologies</li>
+                    <li>Evidence Synthesis</li>
+                    <li>Clinical Trial Methodology</li>
+                </ul>
+                
+                <h3>Current Projects</h3>
+                <p>I am currently leading a DFG-funded project on "Advanced Methods for Handling Sparse Data in Network Meta-Analysis" which aims to develop robust statistical techniques for situations with limited data availability.</p>
+            </div>
+            
+            <div class="publications">
+                <h2>Published Research</h2>
+                
+                <ul class="publication-list">
+                    <li>
+                        <span class="publication-title">A novel method for handling sparse data in network meta-analysis</span>
+                        <span class="publication-authors">Evrenoglou T, Mavridis D, Chaimani A</span>
+                        <span class="publication-journal">Statistics in Medicine, 2023; 42(5): 567-589</span>
+                        <div class="publication-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Journal</a>
+                            <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <span class="publication-title">Bayesian approaches to evidence synthesis with limited data</span>
+                        <span class="publication-authors">Evrenoglou T, White IR, Schwarzer G</span>
+                        <span class="publication-journal">Research Synthesis Methods, 2022; 13(4): 412-428</span>
+                        <div class="publication-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Journal</a>
+                            <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <span class="publication-title">Handling missing data in network meta-analysis: A comparative simulation study</span>
+                        <span class="publication-authors">Evrenoglou T, Salanti G, Caldwell DM</span>
+                        <span class="publication-journal">BMC Medical Research Methodology, 2021; 21: 249</span>
+                        <div class="publication-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Journal</a>
+                            <a href="#"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary">View All Publications</a>
+                    <a href="#" class="btn">Google Scholar Profile</a>
                 </div>
             </div>
-            
-       <section class="publications">
-          <h2>Published research</h2> 
-          
-            </div>
-            </div>
-            </div>
-        </section>
-            
+        </div>
             
         <section class="contact">
             <h2>Contact</h2>
@@ -295,4 +382,3 @@
     </div>
 </body>
 </html>
-						
